@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Vue from '@vueuse/core';
+import Vue from 'vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
