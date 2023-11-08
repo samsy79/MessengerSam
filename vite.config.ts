@@ -10,11 +10,17 @@ export default defineConfig({
     vue(),
   ],
   optimizeDeps: {
-    include: ['@vueuse/core'], // Assurez-vous d'inclure @vueuse/core ici
+    include: ['@vueuse/core'] // Assurez-vous d'inclure @vueuse/core ici
   },
+  
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+    rollupOptions: {
+      external: ['fsevents'], // Exclure fsevents des dépendances externes
+    }
+},
 })
