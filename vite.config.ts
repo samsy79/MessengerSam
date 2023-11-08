@@ -18,9 +18,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  build: {
-    rollupOptions: {
-      external: ['fsevents'], // Exclure fsevents des dépendances externes
-    }
-},
 })
