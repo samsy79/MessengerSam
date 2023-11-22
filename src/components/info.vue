@@ -62,7 +62,7 @@
         <div class="input-field">
           <h1>Personal Info</h1>
         </div>
-        <form @submit.prevent="Info(), showToatSuccess()">
+        <form @submit="Info(), showToatSuccess()">
           <div class="input-field">
             <input
               type="text"

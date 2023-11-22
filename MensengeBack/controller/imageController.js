@@ -1,7 +1,7 @@
 const express = require('express');
 
 const Image = require('../models/image');
-const upload = require('../middleware/multer');
+const upload = require('../middle ware/multer');
 
 // Middleware pour envoyer une image
 const uploadImage = async (req, res) => {

@@ -5,7 +5,7 @@
         <div class="input-field">
           <h1>Register</h1>
         </div>
-        <form action="" @submit.prevent="register,showToatSuccess()">
+        <form action="" @submit.prevent="register(),showToatSuccess()">
           <div class="input-field">
             <input type="text" placeholder="Name" v-model="user.name" />
           </div>
@@ -77,6 +77,10 @@ const register = async function () {
       const email = localStorage.setItem(
         "email",
         userData.data.PersonalId.email
+      );
+      const token = localStorage.setItem(
+        "token",
+        userData.data.token
       );
       error.value = "you are now registered"
 

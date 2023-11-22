@@ -156,6 +156,7 @@ const login = async (req, res, next) => {
     if (!userExist) {
       res.status(400).json({ message: "Review your login details" });
     }
+    
     const realPass = userExist.password;
     const passwordIsVerif = await bcrypt.compare(reqPassword, realPass);
 
@@ -186,7 +187,7 @@ const login = async (req, res, next) => {
       });
     }
   } catch (e) {
-    res.json({ message: "Oups Something Wrong when connecting" });
+    
   }
 };
 //-------------------Avoir tous les informations sur l'utlisateur connecté-----------------------------
